@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { FaBars, FaInstagram, FaFacebook } from "react-icons/fa";
-import { Link } from "react-scroll"; // Using react-scroll for smooth scrolling
+import logo from "../assets/bean_Scene.png";
+import menu from "../assets/menu_icon.svg";
+import cross from "../assets/cross_icon.svg";
 
-const Navbar = () => {
+function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  // Handling body overflow when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = showMobileMenu ? "hidden" : "auto";
     return () => {
@@ -14,58 +14,36 @@ const Navbar = () => {
   }, [showMobileMenu]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-transparent">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
-        {/* Name "Nichola Zhang" aligned to the left */}
-        <div className="text-white text-xl font-semibold">Nichola Zhang</div>
+    <div    style={{ fontFamily: "Playpen Sans" }} className="absolute top-3 left-0 w-full z-5">
+      <div className="absolute flex-shrink-0 top-3 items-start ml-20">
+        <img src={logo} alt="Logo" className="w-30" />
+      </div>
+      <div className="container mx-auto flex justify-between items-center  px-6 md:px-5 lg:px-32 bg-transparent mb-20">
+        {/* Logo on the left */}
 
-        {/* Desktop Navigation - Centered */}
-        <ul className="hidden md:flex gap-7 text-white mx-auto">
-          <Link
-            to="home"
-            smooth={true}
-            className="cursor-pointer hover:text-gray-400"
-          >
+        {/* Navigation Menu - Centered */}
+        <ul className="hidden md:flex justify-center flex-grow gap-15 mt-5 text-white text-lg ">
+          <a href="#Home" className="cursor-pointer hover:text-[#F9C06A] hover:underline">
             Home
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            className="cursor-pointer hover:text-gray-400"
-          >
+          </a>
+          <a href="#menu" className="cursor-pointer hover:text-[#F9C06A] hover:underline">
+            Menu
+          </a>
+          <a href="#about" className="cursor-pointer hover:text-[#F9C06A] hover:underline">
             About
-          </Link>
-          <Link
-            to="books"
-            smooth={true}
-            className="cursor-pointer hover:text-gray-400"
-          >
-            Books
-          </Link>
-          <Link
-            to="extras"
-            smooth={true}
-            className="cursor-pointer hover:text-gray-400"
-          >
-            Extras
-          </Link>
+          </a>
+
+          <a href="#contact" className="cursor-pointer hover:text-[#F9C06A] hover:underline">
+            Contact Us
+          </a>
         </ul>
 
-        {/* Social Media Icons (Desktop only) */}
-        <div className="hidden md:flex gap-4 ml-6">
-          <button className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-            <FaInstagram size={20} className="text-white" />
-          </button>
-          <button className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
-            <FaFacebook size={20} className="text-white" />
-          </button>
-        </div>
-
-        {/* Mobile menu icon */}
-        <FaBars
+        {/* Mobile Menu Icon */}
+        <img
           onClick={() => setShowMobileMenu(true)}
-          className="md:hidden text-white cursor-pointer"
-          size={24}
+          src={menu}
+          alt="menu icon"
+          className="md:hidden w-7 cursor-pointer"
         />
       </div>
 
@@ -75,44 +53,60 @@ const Navbar = () => {
           showMobileMenu ? "fixed w-full" : "h-0 w-0"
         } right-0 top-0 bottom-0 overflow-hidden bg-white transition-all`}
       >
-        {/* Mobile Links */}
-        <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
-          <Link
+        <div className="flex justify-end p-6 cursor-pointer">
+          <img
             onClick={() => setShowMobileMenu(false)}
-            to="home"
-            smooth={true}
-            className=" cursor-pointer px-4 py-2 rounded-full inline-block"
+            src={cross}
+            alt="close icon"
+            className="w-6"
+          />
+        </div>
+        <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
+          <a
+            onClick={() => setShowMobileMenu(false)}
+            href="#home"
+            className="px-4 py-2 rounded-full inline-block"
           >
             Home
-          </Link>
-          <Link
+          </a>
+          <a
             onClick={() => setShowMobileMenu(false)}
-            to="about"
-            smooth={true}
-            className=" cursor-pointer px-4 py-2 rounded-full inline-block"
+            href="#about"
+            className="px-4 py-2 rounded-full inline-block"
           >
             About
-          </Link>
-          <Link
+          </a>
+          <a
             onClick={() => setShowMobileMenu(false)}
-            to="books"
-            smooth={true}
-            className=" cursor-pointer px-4 py-2 rounded-full inline-block"
+            href="#Menu"
+            className="px-4 py-2 rounded-full inline-block"
           >
-            Books
-          </Link>
-          <Link
+            Menu
+          </a>
+          <a
             onClick={() => setShowMobileMenu(false)}
-            to="extras"
-            smooth={true}
-            className=" cursor-pointer px-4 py-2 rounded-full inline-block"
+            href="#contact"
+            className="px-4 py-2 rounded-full inline-block"
           >
-            Extras
-          </Link>
+            Contact Us
+          </a>
         </ul>
+      </div>
+
+      {/* Sign in and Sign up buttons - Justified to the right */}
+      <div className="hidden md:flex absolute flex-shrink-0 top-3 gap-5 right-25">
+        <button className="text-amber-50 underline cursor-pointer py-1 px-2 rounded-full">
+          Sign in
+        </button>
+        <button
+          style={{ backgroundColor: "#F9C06A" }}
+          className="bg-white px-8 py-2 rounded-full cursor-pointer"
+        >
+          Sign up
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default Navbar;

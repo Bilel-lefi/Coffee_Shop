@@ -1,33 +1,16 @@
-import "./App.css";
-import Home from "./components/Home";
+import React from "react";
 import About from "./components/About";
-import Books from "./components/Books";
-import Extras from "./components/Extras";
-import backgroundImage from "./assets/home.jpg";
-import Navbar from "./components/Navbar";
-
+import Contact from "./components/Contact";
+import Home from "./components/home";
+import Menu from "./components/menu";
+import "./App.css";
 function App() {
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <Navbar />
-      <section id="home" className="pt-24">
-        <Home />
-      </section>
-
-      <section id="about" className="pt-24">
-        <About />
-      </section>
-
-      <section id="books" className="pt-24">
-        <Books />
-      </section>
-
-      <section id="extras" className="pt-24">
-        <Extras />
-      </section>
+    <div className="w-full overflow-hidden">
+      <Home path="/" />
+      <Menu />
+      <About />
+      <Contact />
     </div>
   );
 }
