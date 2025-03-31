@@ -13,7 +13,7 @@ Un site web **Coffee Shop** moderne et réactif, construit avec **React.js** et 
 
 | Home Page                           | About Page                            | Menu Page                           | Contact Page                              |
 | ----------------------------------- | ------------------------------------- | ----------------------------------- | ----------------------------------------- |
-| ![Home Page](./assets/home.png) | ![About Page](./assets/about.png) | ![Menu Page](./assets/menu.png) | ![Contact Page](./assets/footter.png) |
+| ![Home Page](./assets/home.png) | ![About Page](./assets/about.png) | ![Menu Page](./assets/menu.png) | ![Contact Page](https://github.com/Bilel-lefi/Coffee_Shop/blob/master/src/assets/fotter_image.png) |
 
 ## ✨ Fonctionnalités
 
