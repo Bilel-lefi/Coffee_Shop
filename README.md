@@ -13,7 +13,7 @@ Un site web **Coffee Shop** moderne et réactif, construit avec **React.js** et 
 
 | Home Page                           | About Page                            | Menu Page                           | Contact Page                              |
 | ----------------------------------- | ------------------------------------- | ----------------------------------- | ----------------------------------------- |
-| ![Home Page](./src/assets/home.png) | ![About Page](./src/assets/about.png) | ![Menu Page](./src/assets/menu.png) | ![Contact Page](./src/assets/footter.png) |
+| ![Home Page](./assets/home.png) | ![About Page](./assets/about.png) | ![Menu Page](./assets/menu.png) | ![Contact Page](./assets/footter.png) |
 
 ## ✨ Fonctionnalités
 
