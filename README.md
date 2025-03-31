@@ -11,9 +11,21 @@ Un site web **Coffee Shop** moderne et réactif, construit avec **React.js** et 
 
 ## 📸 Aperçu
 
-| Home Page                           | About Page                            | Menu Page                           | Contact Page                              |
-| ----------------------------------- | ------------------------------------- | ----------------------------------- | ----------------------------------------- |
-| ![Home Page](./assets/home.png) | ![About Page](./assets/about.png) | ![Menu Page](./assets/menu.png) | ![Contact Page](https://github.com/Bilel-lefi/Coffee_Shop/blob/master/src/assets/fotter_image.png) |
+### 🏠 Home Page
+
+![Home Page](./src/assets/home.png)
+
+### 📖 About Page
+
+![About Page](./src/assets/about.png)
+
+### 📜 Menu Page
+
+![Menu Page](./src/assets/menu.png)
+
+### 📩 Contact Page
+
+![Contact Page](./src/assets/footter.png)
 
 ## ✨ Fonctionnalités
 
@@ -29,4 +41,16 @@ Un site web **Coffee Shop** moderne et réactif, construit avec **React.js** et 
 ```bash
 git clone https://github.com/Bilel-lefi/Coffee_Shop.git
 cd Coffee_Shop
+```
+
+2️⃣ **Installer les dépendances** :
+
+```bash
+npm install
+```
+
+3️⃣ **Démarrer le serveur de développement** :
+
+```bash
+npm run dev
 ```
